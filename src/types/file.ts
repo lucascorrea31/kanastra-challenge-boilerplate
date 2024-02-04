@@ -1,4 +1,5 @@
 import { ReactNode } from "react";
+import { Statement } from "./statement";
 
 enum FileActionType {}
 
@@ -7,11 +8,10 @@ type ReducerAction<T, P> = {
   payload?: Partial<P>;
 };
 
-
 type FileContextState = {
   isLoading: boolean;
   file: File | null;
-  fileList: File[]; // & {} You can add more information about the challenge inside this type
+  fileList: Statement[];
 };
 
 type FileAction = ReducerAction<
